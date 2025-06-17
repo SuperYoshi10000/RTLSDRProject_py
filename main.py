@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from rtlsdr import RtlSdrTcpClient
-# import SoapySDR
+import SoapySDR
 
 load_dotenv()
 
