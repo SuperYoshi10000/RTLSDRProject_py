@@ -11,7 +11,7 @@ load_dotenv()
 server=os.getenv("RTLSDR_SERVER", "localhost:8000")
 print(server)
 sdr = Device(dict(
-    driver="rtltcp",
+    #driver="rtltcp",
     rtltcp=server,
 ))
 
