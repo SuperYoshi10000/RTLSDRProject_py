@@ -10,10 +10,7 @@ load_dotenv()
 
 server=os.getenv("RTLSDR_SERVER", "localhost:8000")
 print(server)
-sdr = Device(dict(
-    #driver="rtltcp",
-    rtltcp=server,
-))
+sdr = Device(f"rtltcp={server}")
 
 sample_rate = os.getenv("RTLSDR_SAMPLE_RATE", 2e6) # Sample rate in Hz
 center_freq = os.getenv("RTLSDR_CENTER_FREQ", 100e6) # Center frequency in Hz
